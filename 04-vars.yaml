@@ -7,5 +7,7 @@
     country: "india"
   tasks:
   - name: print your details
+    vars:
+      city: "khammam"
     ansible.builtin.debug:
       msg: "i live in {{state}} : {{city}} : {{country}}"   
