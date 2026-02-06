@@ -1,5 +1,5 @@
 - name: "frontend installation"
-  hosts: frontend
+  hosts: web
   tasks:
   - name: "ping the server"
     ansible.builtin.ping:
