@@ -11,5 +11,5 @@
   tasks:  
   - name: print username
     ansible.builtin.debug:
-      msg: "hello {{name}}"  
+      msg: "hello {{username}}"  
   
