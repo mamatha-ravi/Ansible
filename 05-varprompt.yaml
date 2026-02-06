@@ -1,0 +1,15 @@
+- name: usrname and password
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: username
+    prompt: "what is your name"
+    privatr: false
+  - name: password
+    prompt: "type your password"
+    privatr: true 
+  tasks:  
+  - name: print username
+    ansible.builtin.debug:
+      msg: "hello {{username}}"  
+  
