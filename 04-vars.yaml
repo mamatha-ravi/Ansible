@@ -1,10 +1,8 @@
 - name: variables
   hosts: local
   connection: local
-  vars:
-    state: "Telangana"
-    city: "Hyderabad"
-    country: "india"
+  vars_files:
+  - vardetails.yaml
   tasks:
   - name: print your details
     vars:
