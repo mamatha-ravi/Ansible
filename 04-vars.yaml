@@ -1,0 +1,10 @@
+- name: variables
+  hosts: local
+  connection: local
+  vars:
+    state: "Telangana"
+    city: "Hyderabad"
+    country: "india"
+  tasks:
+    ansible.builtin.debug:
+      msg: "i live in {{state}} : {{city}} : {{country}}"   
