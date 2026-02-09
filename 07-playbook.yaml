@@ -10,7 +10,7 @@
   - name: city
     prompt: "city name?"
     private: false
-  
+  tasks:
   - name: "print ur city"
     vars:
       city: "Hyderabad task"
