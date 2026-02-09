@@ -1,0 +1,11 @@
+- name: loops test
+  hosts: local
+  connection: local
+  tasks:
+  - name: install servers
+    ansible.builtin.package:
+      name: {{item}}
+      status: present
+    loop:
+    - mysql
+    - nginx
