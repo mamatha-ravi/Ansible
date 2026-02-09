@@ -4,7 +4,7 @@
   tasks:
   - name: install servers
     ansible.builtin.package:
-      name: {{item}}
+      name: "{{item}}"
       status: present
     loop:
     - mysql
