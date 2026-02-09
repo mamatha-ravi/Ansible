@@ -13,7 +13,7 @@
   - name: string to lists
     ansible.builtin.debug:
       msg: "{{ topics | split (',') }}"
-  - name: string to lists
+  - name: dictionary to lists
     ansible.builtin.debug:
       msg: "{{ tagslist | dict2items }}"
       
