@@ -14,7 +14,7 @@
   - name: print ur city
     vars:
       city: "Hyderabad task"
-    ansible.builtin,.debug:
+    ansible.builtin.debug:
       msg: " {{city}}"
       
 
