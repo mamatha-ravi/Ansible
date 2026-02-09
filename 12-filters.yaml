@@ -3,7 +3,7 @@
   connection: local
   vars: 
     topics: linux, shell, ansible
-  tagslist:
+  tagsList:
     Application: payment
     Environment: dev
   tasks:
@@ -15,6 +15,6 @@
       msg: "{{ topics | split (',') }}"
   - name: dictionary to lists
     ansible.builtin.debug:
-      msg: "{{ tagslist | dict2items }}"
+      msg: "{{ tagsList | dict2items }}"
       
       
