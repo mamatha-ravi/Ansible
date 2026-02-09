@@ -13,4 +13,8 @@
   - name: check no less than 5
     ansible.builtin.debug:
       msg: "yes number less than 5"
-    when: NUMBER < 5  
+    when: NUMBER < 5 
+  - name: check disk usage
+    ansible.builtin.debug:
+      msg: "checking disk usage"
+    when: ansible_facts['os_family'] == 'REDHAT' 
