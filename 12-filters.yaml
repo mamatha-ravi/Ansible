@@ -1,11 +1,23 @@
 - name: test filters
   hosts: local
   connection: local
-  vars: 
+  vars:  # string
     topics: linux, shell, ansible
-    tagsList:
+    tagsMap:  # map/dictionary
       Application: payment
       Environment: dev
+    tagsList:  # list
+       [
+        {
+            "key": "Application",
+            "value": "payment"
+        },
+        {
+            "key": "Environment",
+            "value": "dev"
+        }
+    ]
+
   tasks:
   - name: print greetings
     ansible.builtin.debug:
@@ -15,6 +27,9 @@
       msg: "{{ topics | split (',') }}"
   - name: dictionary to lists
     ansible.builtin.debug:
-      msg: "{{ tagsList | dict2items }}"
+      msg: "{{ tagsMap | dict2items }}"
+  - name: lists to map
+    ansible.builtin.debug:
+      msg: "{{ tagsList | items2dict }}"
       
       
