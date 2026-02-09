@@ -11,7 +11,7 @@
     prompt: "city name?"
     private: false
   
-  - name: print ur name
+  - name: "print ur city"
     vars:
       city: "Hyderabad task"
     ansible.builtin,.debug:
