@@ -13,6 +13,7 @@
     - khammam
     - wrngl
   tasks:
+  - name: print data types
     ansible.builtin.debug:
       msg: |
         COUNTRY: {{COUNTRY}}
