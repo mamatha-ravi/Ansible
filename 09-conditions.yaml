@@ -3,7 +3,7 @@
   connection: local
   vars:
     CITY: Hyderabad
-    IS_TRUE: true
+    IS_TRUE: false
   tasks:
   - name: print city
     ansible.builtin.debug:
