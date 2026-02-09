@@ -35,5 +35,11 @@
   - name: lists to map
     ansible.builtin.debug:
       msg: "{{ tagsList | items2dict }}"
+  - name: read yaml file
+    ansible.builtin.set_facts:
+      var_file: "{{ lookup('file' , 'vars.yaml') | from_yaml }}"
+  - name: 2convert yaml to json
+    ansible.builtin.debug:
+      msg: "{{ var_file | to_nice_json }}"
       
       
