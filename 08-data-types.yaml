@@ -1,0 +1,23 @@
+- name: dtata types
+  hosts: local
+  connection: local
+  vars:
+    COUNTRY: india
+    GDP: 4
+    IS_TRUE: true
+    STATES: #maps/dictionaries
+      TELANGANA: Hyderabad
+      KARNATAKA: Bangalore
+      ANDHRA: Vizag.
+    CITIES: # list
+    - khammam
+    - wrngl
+  tasks:
+    ansible.builtin.debug:
+      msg: |
+        COUNTRY: {{COUNTRY}}
+        gdp: {{GDP}}
+        istrue: {{IS_TRUE}}
+        states: {{STATES}}
+        Cities{{CITIES}}
+        
