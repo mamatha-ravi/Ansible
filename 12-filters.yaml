@@ -3,6 +3,9 @@
   connection: local
   vars: 
     topics: linux, shell, ansible
+  tags:
+    Application: payment
+    Environment: dev
   tasks:
   - name: print greetings
     ansible.builtin.debug:
@@ -10,5 +13,8 @@
   - name: string to lists
     ansible.builtin.debug:
       msg: "{{ topics | split (',') }}"
+  - name: string to lists
+    ansible.builtin.debug:
+      msg: {{ tags | dict2items}}
       
       
