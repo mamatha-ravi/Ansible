@@ -14,7 +14,7 @@
     ansible.builtin.debug:
       msg: "yes number less than 5"
     when: NUMBER < 5 
-  - name: check disk usage
+  - name: check OS
     ansible.builtin.debug:
-      msg: "{{ansible_facts}}"
-    # when: ansible_facts['os_family'] == 'REDHAT' 
+      msg: "it is Red Hat OS"
+    when: ansible_facts['os_family'] == 'Red Hat' 
