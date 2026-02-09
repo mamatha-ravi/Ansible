@@ -1,0 +1,22 @@
+- name: server and user installation
+  hosts: local
+  connection: local
+  vars:
+    city: "Hyderabad Play"
+    schoolname: Kinnera
+  vars_files:
+  - vardetails.yaml
+  vars_prompt:
+  - name: city
+    prompt: "city name?"
+    private: false
+  
+  - name: print ur name
+    vars:
+      city: "Hyderabad task"
+    ansible.builtin,.debug:
+      msg: "hello {{city}}"
+      
+
+
+    
