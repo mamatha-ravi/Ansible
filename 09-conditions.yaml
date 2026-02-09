@@ -3,10 +3,14 @@
   connection: local
   vars:
     CITY: Hyderabad
-    IS_TRUE: false
+    IS_TRUE: true
+    NUMBER: 4
   tasks:
   - name: print city
     ansible.builtin.debug:
       msg: "i live in {{CITY}}"
     when: IS_TRUE
-
+  - name: check no less than 5
+    ansible.builtin.debug:
+      msg: "yes number less than 5"
+    when: NUMBER < 5  
