@@ -2,14 +2,14 @@
   hosts: local
   connection: local
   vars:
-    COUNTRY: "india"
-    GDP: 4
-    IS_TRUE: true
-    STATES: #maps/dictionaries
+    COUNTRY: "india" # string
+    GDP: 4 # int
+    IS_TRUE: true # bool
+    STATES: #maps/dictionaries {}
       TELANGANA: Hyderabad
       KARNATAKA: Bangalore
       ANDHRA: Vizag
-    CITIES: # list
+    CITIES: # list []
     - khammam
     - wrngl
   tasks:

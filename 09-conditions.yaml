@@ -1,0 +1,12 @@
+- name: conditions and loops
+  hosts: local
+  connection: local
+  vars:
+    CITY: Hyderabad
+    IS_TRUE: true
+  tasks:
+  - name: print city
+    ansible.builtin.debug:
+      msg: "i live in {{CITY}}"
+    when: IS_TRUE
+
