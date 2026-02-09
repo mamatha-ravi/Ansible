@@ -5,7 +5,7 @@
   - name: command test
     ansible.builtin.shell: cat /etc/passwd | grep root
     register: root_output
-  - name: print o/p
+  # - name: print o/p
     ansible.builtin.debug:
       msg: "{{root_output}}"
       
