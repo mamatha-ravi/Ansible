@@ -1,14 +1,14 @@
-- name: dtata types
+- name: data types
   hosts: local
   connection: local
   vars:
-    COUNTRY: india
+    COUNTRY: "india"
     GDP: 4
     IS_TRUE: true
     STATES: #maps/dictionaries
       TELANGANA: Hyderabad
       KARNATAKA: Bangalore
-      ANDHRA: Vizag.
+      ANDHRA: Vizag
     CITIES: # list
     - khammam
     - wrngl
