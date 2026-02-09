@@ -12,7 +12,11 @@
       
   - name: shell test
     ansible.builtin.shell: 
-      ls -ltr > files.txt
+       ls -ltr > files.txt
+    register: files_out
+  - name: command test
+    and.builtin.command:
+      cat files.txt
     register: files_output
   - name: print o/p
     ansible.builtin.debug:
