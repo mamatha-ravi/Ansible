@@ -6,17 +6,21 @@
     tagsMap:  # map/dictionary
       Application: payment
       Environment: dev
-    tagsList:  # list
-       [
-        {
-            "key": "Application",
-            "value": "payment"
-        },
-        {
-            "key": "Environment",
-            "value": "dev"
-        }
-    ]
+    tagsList:  # list   
+    - key: Application
+      value: payment
+    - key: Environment
+      value: dev
+    #    [
+    #     {
+    #         "key": "Application",
+    #         "value": "payment"
+    #     },
+    #     {
+    #         "key": "Environment",
+    #         "value": "dev"
+    #     }
+    # ]
 
   tasks:
   - name: print greetings
