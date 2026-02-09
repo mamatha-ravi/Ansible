@@ -15,7 +15,7 @@
        ls -ltr > files.txt
     register: files_out
   - name: command test
-    and.builtin.command:
+    ansible.builtin.command:
       cat files.txt
     register: files_output
   - name: print o/p
