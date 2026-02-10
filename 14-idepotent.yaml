@@ -4,4 +4,4 @@
   tasks:
   - name: create user
     ansible.builtin.user:
-    name: roboshop
+      name: roboshop
