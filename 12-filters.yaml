@@ -37,9 +37,9 @@
       msg: "{{ tagsList | items2dict }}"
   - name: read yaml file
     ansible.builtin.set_facts:
-      var_file: "{{ lookup('file' , 'vars.yaml') | from_yaml }}"
+      var_yaml: "{{ lookup('file' , 'vars.yaml') | from_yaml }}"
   - name: 2convert yaml to json
     ansible.builtin.debug:
-      msg: "{{ var_file | to_nice_json }}"
+      msg: "{{ var_yaml | to_nice_json }}"
       
       
