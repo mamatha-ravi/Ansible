@@ -1,5 +1,5 @@
 - name: test filters
-  hosts: All
+  hosts: local
   connection: local
   vars:  # string
     topics: linux, shell, ansible
